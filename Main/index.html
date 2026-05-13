@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vagner Dutra | Analista de Sistemas Pleno - Currículo Profissional e Portfólio.">
+    <title>Vagner Dutra | Currículo Profissional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root { --cv-gold: #C9A14A; --cv-gold-light: #E5C97B; --cv-dark: #111; --cv-black: #0a0a0a; --cv-border: rgba(201, 161, 74, 0.15); }
+        body { font-family: 'Inter', sans-serif; background-color: var(--cv-black); color: #f5f5f5; scroll-behavior: smooth; }
+        .premium-title { font-family: 'Playfair Display', serif; }
+        .code-font { font-family: 'Fira Code', monospace; }
+        .text-gold { color: var(--cv-gold); }
+
+        /* Componentes Globais */
+        .btn-cv-gold { background: linear-gradient(135deg, var(--cv-gold-light) 0%, var(--cv-gold) 100%); color: #000; transition: all 0.3s ease; }
+        .btn-cv-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(201, 161, 74, 0.3); }
+        .cv-card { background-color: var(--cv-dark); border: 1px solid var(--cv-border); transition: all 0.3s ease; }
+        .cv-card:hover { border-color: var(--cv-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.5); transform: translateY(-5px); }
+
+        .skill-badge { background: rgba(201, 161, 74, 0.05); border: 1px solid var(--cv-border); padding: 0.5rem 1rem; border-radius: 99px; font-size: 0.75rem; font-weight: 600; color: var(--cv-gold-light); text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s ease; display: inline-block; }
+        .skill-badge:hover { background: var(--cv-gold); color: #000; border-color: var(--cv-gold); transform: translateY(-2px); }
+
+        /* Cards de Navegação */
+        .exp-card { position: relative; overflow: hidden; border-radius: 0.75rem; height: 24rem; display: block; border: 1px solid var(--cv-border); transition: all 0.5s ease; }
+        .exp-bg { position: absolute; inset: 0; width: 100%; height: 100%; background-size: cover; background-position: center; transition: transform 0.7s ease; z-index: 0; }
+        .exp-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.95) 10%, rgba(0,0,0,0.3) 100%); transition: background 0.5s ease; z-index: 10; }
+        .exp-card:hover .exp-bg { transform: scale(1.1); }
+        .exp-card:hover .exp-overlay { background: linear-gradient(to top, rgba(0,0,0,1) 20%, rgba(0,0,0,0.2) 100%); }
+        .exp-card:hover { border-color: var(--cv-gold); box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
+
+        /* Janelas Técnicas (Mockups) */
+        .tech-window { background-color: #1e1e1e; border: 1px solid #333; border-radius: 0.5rem; overflow: hidden; }
+        .tech-header { background-color: #2d2d2d; padding: 0.75rem 1rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #111; }
+        .tech-dots { display: flex; gap: 0.5rem; }
+        .tech-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .dot-red { background-color: #ff5f56; }
+        .dot-yellow { background-color: #ffbd2e; }
+        .dot-green { background-color: #27c93f; }
+
+        /* Helpers Visuais e SQL */
+        .sql-keyword { color: #569cd6; font-weight: 500; }
+        .sql-function { color: #dcdcaa; }
+        .sql-string { color: #ce9178; }
+        .sql-comment { color: #6a9955; font-style: italic; }
+        .health-bar { height: 8px; border-radius: 4px; background: #222; overflow: hidden; }
+        .health-fill { height: 100%; background: linear-gradient(90deg, #C9A14A, #27c93f); width: 94%; }
+        .status-tag { background-color: rgba(39, 201, 63, 0.1); color: #27c93f; padding: 0.25rem 0.75rem; border-radius: 99px; font-size: 0.65rem; font-weight: bold; border: 1px solid rgba(39, 201, 63, 0.3); text-transform: uppercase; }
+        .info-tag { background-color: rgba(59, 130, 246, 0.1); color: #60a5fa; padding: 0.25rem 0.75rem; border-radius: 99px; font-size: 0.65rem; font-weight: bold; border: 1px solid rgba(59, 130, 246, 0.3); text-transform: uppercase; }
+
+        .profile-img-hero { object-fit: cover; border: 4px solid var(--cv-gold); }
+        .hero-section { background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop') center/cover fixed; }
+        .server-grid { background-image: linear-gradient(rgba(201, 161, 74, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(201, 161, 74, 0.05) 1px, transparent 1px); background-size: 20px 20px; }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#C9A14A] selection:text-black">
+
+    <header class="py-6 px-6 border-b border-gray-800 bg-[#0a0a0a]/95 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-xl md:text-2xl font-bold premium-title tracking-widest text-white uppercase">
+                VAGNER DUTRA <span class="text-gold font-light opacity-80">| CV</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#sobre" class="text-gray-400 hover:text-gold transition text-xs uppercase tracking-widest font-bold">Sobre</a>
+                <a href="#experiencia" class="text-gray-400 hover:text-gold transition text-xs uppercase tracking-widest font-bold">Experiência</a>
+                <a href="https://www.linkedin.com/in/vagdutra" target="_blank" rel="noopener noreferrer" class="text-gold font-bold flex items-center gap-2 hover:scale-105 transition text-xs uppercase tracking-widest"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section min-h-[90vh] flex items-center py-20 px-6 border-b border-gray-900 text-center">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 mb-10">
+                    <img src="vagner.jpg" alt="Vagner Dutra" class="w-72 h-72 md:w-[480px] md:h-[480px] aspect-square rounded-full profile-img-hero shadow-2xl">
+                    <div class="text-center lg:text-left">
+                        <p class="text-gold uppercase tracking-[0.4em] font-bold mb-4 text-xs">Analista de Sistemas | ERP | Oracle SQL | Gestão de TI</p>
+                        <h1 class="premium-title text-5xl md:text-8xl leading-tight text-white">Vagner <span class="text-gold italic">Dutra</span></h1>
+                    </div>
+                </div>
+                <p class="text-xl md:text-2xl font-light text-gray-400 max-w-3xl mx-auto leading-relaxed mb-12">Transformando regras de negócio em soluções de TI eficientes e escaláveis.</p>
+                <div class="flex flex-col md:flex-row justify-center gap-6 text-center">
+                    <a href="#sobre" class="btn-cv-gold font-bold py-5 px-12 rounded text-sm tracking-widest uppercase">Conhecer Perfil</a>
+                    <a href="https://wa.me/5551998812254" target="_blank" rel="noopener noreferrer" class="border border-gold text-gold font-bold py-5 px-12 rounded text-sm tracking-widest uppercase hover:bg-gold hover:text-black transition">Contato Direto</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-24 px-6 bg-[#0a0a0a]">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex flex-col lg:flex-row gap-16 items-start">
+                    <div class="flex-1 text-justify">
+                        <h2 class="premium-title text-4xl md:text-5xl mb-6 text-center lg:text-left">Sobre <span class="text-gold">Mim</span></h2>
+                        <div class="w-20 h-1 bg-gold mb-8 mx-auto lg:mx-0"></div>
+                        <div class="space-y-6 text-gray-300 text-lg font-light leading-relaxed">
+                            <p>Atuo na área de tecnologia com foco em sustentação de sistemas, análise de dados e suporte a operações críticas. Minha experiência está concentrada principalmente em ambientes ERP, troubleshooting, validação de regras de negócio e análise técnica voltada à estabilidade operacional.</p>
+                            <p>Atualmente trabalho como Analista de Sistemas na <strong>FUNCORSAN</strong>, participando da sustentação de sistemas core e da análise de processos financeiros, seguridade e operacionais utilizando <strong>Oracle Database, SQL Developer e PL/SQL</strong>.</p>
+                            <p>Tenho formação em Administração e curso Gestão da Tecnologia da Informação na <strong>UNISINOS</strong>, combinação que me ajuda a enxergar tanto os impactos técnicos quanto operacionais das soluções implementadas.</p>
+                            <p>Ao longo da trajetória, atuei em ambientes corporativos de alta demanda, incluindo experiência na <strong>Dell Computadores</strong>, o que contribuiu para desenvolver uma atuação mais analítica e orientada à resolução de problemas sob pressão.</p>
+                            <p>Paralelamente, desenvolvo projetos próprios envolvendo automação de processos, aplicações web e ferramentas de apoio à gestão, transformando necessidades reais em soluções funcionais.</p>
+                            <p>Além da tecnologia, sou <strong>faixa preta e professor de jiu-jitsu</strong>. A disciplina e a capacidade de manter clareza em cenários de pressão são características fundamentais na minha atuação.</p>
+                            <p class="text-gold italic font-medium">Busco oportunidades onde tecnologia, processo e visão de negócio precisem caminhar juntos.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="cv-card p-6 rounded-lg">
+                            <h4 class="text-gold text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2"><i class="bi bi-database"></i> Oracle & Dados</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-badge">Database</span> <span class="skill-badge">SQL</span> <span class="skill-badge">PL/SQL</span> <span class="skill-badge">Modelagem</span>
+                            </div>
+                        </div>
+                        <div class="cv-card p-6 rounded-lg">
+                            <h4 class="text-gold text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2"><i class="bi bi-gear-wide-connected"></i> Sistemas</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-badge">ERP</span> <span class="skill-badge">Análise</span> <span class="skill-badge">Regras de Negócio</span> <span class="skill-badge">Troubleshooting</span>
+                            </div>
+                        </div>
+                        <div class="cv-card p-6 rounded-lg">
+                            <h4 class="text-gold text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2"><i class="bi bi-shield-check"></i> Qualidade</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-badge">Testes</span> <span class="skill-badge">Validação</span> <span class="skill-badge">Documentação</span>
+                            </div>
+                        </div>
+                        <div class="cv-card p-6 rounded-lg">
+                            <h4 class="text-gold text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2"><i class="bi bi-kanban"></i> Gestão</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-badge">Scrum</span> <span class="skill-badge">Kanban</span> <span class="skill-badge">Excel</span> <span class="skill-badge">Power BI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia" class="py-24 px-6 bg-[#0f0f0f] border-t border-gray-900">
+            <div class="max-w-7xl mx-auto text-center">
+                <div class="mb-20">
+                    <h2 class="premium-title text-4xl md:text-5xl mb-4 text-white">Trajetória <span class="text-gold">Profissional</span></h2>
+                    <div class="w-24 h-1 bg-gold mx-auto mb-6"></div>
+                    <p class="text-gray-500 text-xs uppercase tracking-widest">Clique nos cards para ver o detalhamento técnico</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <a href="../Funcorsan/funcorsan.html" class="exp-card group">
+                        <div class="exp-bg" style="background-image: url('../Funcorsan/funcorsan.jpg');"></div>
+                        <div class="exp-overlay"></div>
+                        <div class="absolute bottom-8 left-8 z-20 text-left">
+                            <p class="text-gold text-[9px] font-bold tracking-[0.2em] uppercase mb-1">2023 - Atual</p>
+                            <h3 class="premium-title text-xl text-white mb-2 uppercase leading-tight">Funcorsan</h3>
+                            <p class="text-gray-400 text-[10px] uppercase tracking-widest">Analista de Sistemas</p>
+                        </div>
+                    </a>
+
+                    <a href="../Hardlink/hardlink.html" class="exp-card group">
+                        <div class="exp-bg" style="background-image: url('../Hardlink/hardlink.jpg');"></div>
+                        <div class="exp-overlay"></div>
+                        <div class="absolute bottom-8 left-8 z-20 text-left">
+                            <p class="text-gold text-[9px] font-bold tracking-[0.2em] uppercase mb-1">2021 - 2022</p>
+                            <h3 class="premium-title text-xl text-white mb-2 uppercase leading-tight">Hardlink</h3>
+                            <p class="text-gray-400 text-[10px] uppercase tracking-widest">Inside Sales</p>
+                        </div>
+                    </a>
+
+                    <a href="../CIGAM/cigam.html" class="exp-card group">
+                        <div class="exp-bg" style="background-image: url('../CIGAM/cigam.jpg');"></div>
+                        <div class="exp-overlay"></div>
+                        <div class="absolute bottom-8 left-8 z-20 text-left">
+                            <p class="text-gold text-[9px] font-bold tracking-[0.2em] uppercase mb-1">2010 - 2011</p>
+                            <h3 class="premium-title text-xl text-white mb-2 uppercase leading-tight">CIGAM</h3>
+                            <p class="text-gray-400 text-[10px] uppercase tracking-widest">Gerente de Contas</p>
+                        </div>
+                    </a>
+
+                    <a href="../Dell/dell.html" class="exp-card group">
+                        <div class="exp-bg" style="background-image: url('../Dell/dell.jpg');"></div>
+                        <div class="exp-overlay"></div>
+                        <div class="absolute bottom-8 left-8 z-20 text-left">
+                            <p class="text-gold text-[9px] font-bold tracking-[0.2em] uppercase mb-1">2008 - 2010</p>
+                            <h3 class="premium-title text-xl text-white mb-2 uppercase leading-tight">Dell</h3>
+                            <p class="text-gray-400 text-[10px] uppercase tracking-widest">Inside Sales</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#0a0a0a] py-12 text-center border-t border-gray-900">
+        <h2 class="premium-title text-2xl text-white uppercase mb-4">VAGNER DUTRA <span class="text-gold">| CV</span></h2>
+        <p class="text-gray-600 text-[10px] uppercase tracking-[0.5em]">&copy; 2026 Porto Alegre/RS. Disponível para novos desafios.</p>
+    </footer>
+
+</body>
+</html>
