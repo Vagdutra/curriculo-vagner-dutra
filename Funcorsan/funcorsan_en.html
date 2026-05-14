@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Experience: Mid-Level Systems Analyst at Funcorsan - Vagner Dutra.">
+    <title>Funcorsan | Vagner Dutra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root { --cv-gold: #C9A14A; --cv-gold-light: #E5C97B; --cv-dark: #111; --cv-black: #0a0a0a; --cv-border: rgba(201, 161, 74, 0.15); }
+        body { font-family: 'Inter', sans-serif; background-color: var(--cv-black); color: #f5f5f5; scroll-behavior: smooth; }
+        .premium-title { font-family: 'Playfair Display', serif; }
+        .code-font { font-family: 'Fira Code', monospace; }
+        .text-gold { color: var(--cv-gold); }
+        .cv-card { background-color: var(--cv-dark); border: 1px solid var(--cv-border); transition: all 0.3s ease; }
+        .cv-card:hover { border-color: var(--cv-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.5); transform: translateY(-5px); }
+        .tech-window { background-color: #1e1e1e; border: 1px solid #333; border-radius: 0.5rem; overflow: hidden; }
+        .tech-header { background-color: #2d2d2d; padding: 0.75rem 1rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #111; }
+        .tech-dots { display: flex; gap: 0.5rem; }
+        .tech-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .dot-red { background-color: #ff5f56; } .dot-yellow { background-color: #ffbd2e; } .dot-green { background-color: #27c93f; }
+        .sql-keyword { color: #569cd6; font-weight: 500; } .sql-function { color: #dcdcaa; } .sql-string { color: #ce9178; } .sql-comment { color: #6a9955; font-style: italic; }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#C9A14A] selection:text-black">
+
+    <header class="py-6 px-6 border-b border-gray-800 bg-[#0a0a0a]/95 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="../Main/index_en.html" class="text-gold hover:text-white transition uppercase text-[10px] tracking-widest font-bold flex items-center gap-2">
+                <i class="bi bi-arrow-left text-lg"></i> Back to Resume
+            </a>
+
+            <div class="flex items-center gap-6">
+                <div class="text-white text-sm uppercase tracking-widest font-bold hidden md:block">
+                    Technical Analysis & Governance
+                </div>
+
+                <div class="flex items-center gap-3 border-l border-gray-800 pl-6 ml-2">
+                    <a href="funcorsan.html" class="opacity-40 hover:opacity-100 hover:scale-110 transition-all rounded-full" title="Portuguese Version">
+                        <img src="https://flagcdn.com/w40/br.png" alt="PT-BR" class="w-5 h-5 rounded-full object-cover">
+                    </a>
+                    <a href="funcorsan_en.html" class="ring-2 ring-gold rounded-full transition-transform scale-110 shadow-[0_0_10px_rgba(201,161,74,0.3)]" title="English Version">
+                        <img src="https://flagcdn.com/w40/gb.png" alt="EN" class="w-5 h-5 rounded-full object-cover">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-20 px-6 border-b border-gray-900 text-center relative overflow-hidden bg-[#111]">
+            <div class="max-w-4xl mx-auto relative z-10">
+                <div class="mb-10 flex justify-center h-20 items-center">
+                    <img src="funcorsan.jpg" alt="Funcorsan Logo" class="max-h-full object-contain drop-shadow-lg">
+                </div>
+                <h1 class="premium-title text-4xl md:text-6xl text-white mb-4">Mid-Level Systems <span class="text-gold italic">Analyst</span></h1>
+                <p class="text-gold uppercase tracking-[0.3em] font-bold text-xs mb-8">Aug 2023 – Present | Porto Alegre, Brazil</p>
+                <div class="w-24 h-1 bg-gold mx-auto mb-8"></div>
+            </div>
+        </section>
+
+        <section class="py-24 px-6 bg-[#0a0a0a]">
+            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+                <div class="flex-1 w-full relative group">
+                    <img src="vagner.png" alt="Core Systems Support" class="relative rounded-xl border border-gray-800 shadow-2xl w-full object-cover transition duration-700 h-[450px]">
+                    <div class="absolute bottom-4 left-4 bg-black/80 backdrop-blur px-4 py-2 rounded border border-gold/30 flex items-center gap-3">
+                        <span class="text-xs text-white uppercase tracking-widest font-bold italic">Core Systems Maintenance</span>
+                    </div>
+                </div>
+
+                <div class="flex-1 w-full">
+                    <h2 class="premium-title text-3xl mb-4 text-white">Critical <span class="text-gold">Data Analysis</span></h2>
+                    <p class="text-gray-400 mb-6 text-sm font-light leading-relaxed">Development of complex SQL logic for plan auditing and ensuring the integrity of pension contributions.</p>
+
+                    <div class="tech-window shadow-2xl">
+                        <div class="tech-header">
+                            <div class="flex items-center gap-4">
+                                <div class="tech-dots hidden md:flex">
+                                    <div class="tech-dot dot-red"></div><div class="tech-dot dot-yellow"></div><div class="tech-dot dot-green"></div>
+                                </div>
+                                <span class="text-[10px] text-gray-400 uppercase tracking-widest code-font italic">contribution_audit_query.sql</span>
+                            </div>
+                        </div>
+                        <div class="p-5 text-[10px] md:text-[11px] code-font leading-relaxed overflow-x-auto whitespace-pre text-gray-300"><span class="sql-keyword">SELECT</span>
+    p.participant_name,
+    pl.plan_code,
+    pl.enrollment_date,
+    r.contribution_value,
+
+    <span class="sql-comment">-- Using CASE for enhanced portability over DECODE</span>
+    <span class="sql-keyword">CASE</span> pl.status
+        <span class="sql-keyword">WHEN</span> <span class="sql-string">'A'</span> <span class="sql-keyword">THEN</span> <span class="sql-string">'Active'</span>
+        <span class="sql-keyword">WHEN</span> <span class="sql-string">'I'</span> <span class="sql-keyword">THEN</span> <span class="sql-string">'Inactive'</span>
+        <span class="sql-keyword">ELSE</span>          <span class="sql-string">'Unknown'</span>
+    <span class="sql-keyword">END AS</span> status_desc,
+
+    r.reference_date <span class="sql-keyword">AS</span> reserve_competence
+<span class="sql-keyword">FROM</span> tb_participant p
+    <span class="sql-keyword">INNER JOIN</span> tb_plan pl <span class="sql-keyword">ON</span> p.participant_id = pl.participant_id
+    <span class="sql-keyword">INNER JOIN</span> tb_reserve r <span class="sql-keyword">ON</span> pl.plan_id = r.plan_id
+        <span class="sql-keyword">AND</span> r.reference_date = (<span class="sql-keyword">SELECT MAX</span>(reference_date) <span class="sql-keyword">FROM</span> tb_reserve <span class="sql-keyword">WHERE</span> plan_id = pl.plan_id)
+<span class="sql-keyword">WHERE</span> pl.status = <span class="sql-string">'A'</span>
+    <span class="sql-keyword">AND</span> (r.contribution_value <= 0)
+<span class="sql-keyword">ORDER BY</span> pl.enrollment_date <span class="sql-keyword">DESC</span>;</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-6 bg-[#0f0f0f] border-t border-gray-900">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="premium-title text-4xl mb-4 text-white">Impact & <span class="text-gold">Results</span></h2>
+                    <p class="text-gray-500 text-xs uppercase tracking-widest font-bold">Funcorsan Core Responsibilities</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="cv-card p-8 rounded-xl">
+                        <div class="w-12 h-12 rounded bg-gold/10 flex items-center justify-center mb-6 border border-gold/20"><i class="bi bi-diagram-3 text-gold text-2xl"></i></div>
+                        <h3 class="text-white font-bold text-sm mb-3 uppercase tracking-wider">ERP Management</h3>
+                        <p class="text-gray-400 font-light text-sm">Maintenance of core Private Pension systems, ensuring the integrity of complex business rules and pension calculations.</p>
+                    </div>
+
+                    <div class="cv-card p-8 rounded-xl">
+                        <div class="w-12 h-12 rounded bg-gold/10 flex items-center justify-center mb-6 border border-gold/20"><i class="bi bi-database-gear text-gold text-2xl"></i></div>
+                        <h3 class="text-white font-bold text-sm mb-3 uppercase tracking-wider">Oracle SQL Expert</h3>
+                        <p class="text-gray-400 font-light text-sm">Advanced use of SQL Developer for query development and performance tuning aimed at report extraction and data governance.</p>
+                    </div>
+
+                    <div class="cv-card p-8 rounded-xl md:col-span-2 border-l-4 border-l-gold">
+                        <div class="w-12 h-12 rounded bg-gold/10 flex items-center justify-center mb-6 border border-gold/20"><i class="bi bi-cloud-check text-gold text-2xl"></i></div>
+                        <h3 class="text-white font-bold text-sm mb-3 uppercase tracking-wider">Cloud Migration</h3>
+                        <p class="text-gray-400 font-light text-sm italic">Technical support in migrating on-premise systems to a private cloud, focusing on architecture planning, security, and operational continuity.</p>
+                    </div>
+
+                    <div class="cv-card p-8 rounded-xl">
+                        <div class="w-12 h-12 rounded bg-gold/10 flex items-center justify-center mb-6 border border-gold/20"><i class="bi bi-patch-check text-gold text-2xl"></i></div>
+                        <h3 class="text-white font-bold text-sm mb-3 uppercase tracking-wider">Troubleshooting</h3>
+                        <p class="text-gray-400 font-light text-sm">Diagnostic of critical technical failures, significantly reducing system downtime through agile and precise fixes.</p>
+                    </div>
+
+                    <div class="cv-card p-8 rounded-xl">
+                        <div class="w-12 h-12 rounded bg-gold/10 flex items-center justify-center mb-6 border border-gold/20"><i class="bi bi-gear-wide-connected text-gold text-2xl"></i></div>
+                        <h3 class="text-white font-bold text-sm mb-3 uppercase tracking-wider">Process Improvement</h3>
+                        <p class="text-gray-400 font-light text-sm">Automation of manual routines and mitigation of human error risks within operational workflows.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 bg-[#0a0a0a] border-t border-gray-900 text-center">
+            <p class="text-gray-500 text-xs uppercase tracking-widest mb-6">View Next Experience</p>
+            <a href="../Hardlink/hardlink_en.html" class="inline-flex items-center gap-3 border border-gold/50 text-gold px-8 py-3 rounded-full hover:bg-gold hover:text-black transition duration-300 tracking-widest text-sm font-bold uppercase">
+                Hardlink - Inside Sales <i class="bi bi-arrow-right"></i>
+            </a>
+        </section>
+    </main>
+
+    <footer class="bg-[#0a0a0a] py-12 text-center border-t border-gray-900">
+        <h2 class="premium-title text-2xl text-white uppercase mb-4">VAGNER DUTRA <span class="text-gold">| CV</span></h2>
+        <p class="text-gray-600 text-[10px] uppercase tracking-[0.5em]">&copy; 2026 Porto Alegre, Brazil.</p>
+    </footer>
+</body>
+</html>
